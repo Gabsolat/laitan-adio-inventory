@@ -887,8 +887,9 @@ with gr.Blocks(title="Laitan-Adio Smart Inventory") as app:
 if __name__ == "__main__":
     print("🚀 Starting Laitan-Adio Smart Inventory...")
     port = int(os.environ.get("PORT", 7860))
+    
     app.launch(
-         server_name="0.0.0.0",
+        server_name="0.0.0.0",
         server_port=port,
-        share=True  # <--- ADD THIS LINE (Change from False to True)
+        share=False  # CRITICAL: share=True causes the 'unhashable dict' crash on Render
     )
