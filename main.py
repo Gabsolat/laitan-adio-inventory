@@ -757,7 +757,7 @@ with gr.Blocks(title="Laitan-Adio Smart Inventory") as app:
             products_table = gr.Dataframe(
                 headers=["Item ID", "Name", "Brand", "Stock", "Threshold", "Lead Time", "Adj Threshold", "Seasonal", "Status"],
                 datatype=["number", "str", "str", "number", "number", "number", "number", "number", "str"],
-                row_count=10, column_count=(9, "fixed"), interactive=False, wrap=True
+                row_count=10, interactive=False, wrap=True
             )
             
             gr.Markdown("### 📊 Graphical Analysis")
@@ -816,7 +816,7 @@ with gr.Blocks(title="Laitan-Adio Smart Inventory") as app:
             search_results = gr.Dataframe(
                 headers=["Item ID", "Name", "Category", "Subcategory", "Brand", "Stock", "Threshold", "Adj Threshold", "Status"],
                 datatype=["number", "str", "str", "str", "str", "number", "number", "number", "str"],
-                row_count=10, column_count=(9, "fixed"), interactive=False, wrap=True, visible=False
+                row_count=10, interactive=False, wrap=True, visible=False
             )
             
             gr.Markdown("### 📊 Graphical Analysis")
