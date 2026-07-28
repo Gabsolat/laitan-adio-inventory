@@ -888,8 +888,9 @@ if __name__ == "__main__":
     print("🚀 Starting Laitan-Adio Smart Inventory...")
     port = int(os.environ.get("PORT", 7860))
     
+    # Officially supported Render deployment configuration
     app.launch(
         server_name="0.0.0.0",
         server_port=port,
-        share=False  # CRITICAL: share=True causes the 'unhashable dict' crash on Render
+        share=False
     )
