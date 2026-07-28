@@ -886,8 +886,9 @@ with gr.Blocks(title="Laitan-Adio Smart Inventory") as app:
                          outputs=add_result)
 if __name__ == "__main__":
     print("🚀 Starting Laitan-Adio Smart Inventory...")
+    port = int(os.environ.get("PORT", 7860))
     app.launch(
-        server_name="0.0.0.0", 
-        server_port=int(os.environ.get("PORT", 7860)),
-        share=False # Set to True if you want a temporary public link, but False is better for Render
+         server_name="0.0.0.0",
+        server_port=port,
+        share=True  # <--- ADD THIS LINE (Change from False to True)
     )
