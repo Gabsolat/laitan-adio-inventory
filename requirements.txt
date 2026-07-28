@@ -2,3 +2,4 @@ gradio==4.36.0
 pandas==2.1.4
 plotly==5.24.1
 numpy==1.26.4
+huggingface-hub<0.24.0
